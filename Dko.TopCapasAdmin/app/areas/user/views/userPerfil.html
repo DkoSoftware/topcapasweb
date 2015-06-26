@@ -1,0 +1,86 @@
+﻿<ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Perfil</a></li>
+    <li><a href="#">Dados cadastrais</a></li>
+</ul>
+<!-- END BREADCRUMB -->
+
+<div ng-controller="userPerfilController">
+    <!-- PAGE TITLE -->
+    <div class="page-title">
+        <h3><span class="fa fa-user"></span> {{ title }}</h3>
+    </div>
+    <!-- END PAGE TITLE -->
+
+    <div class="col-md-12 animated fadeIn">
+        <!-- FORM -->
+        <form class="form-horizontal" name="formUserRegister" novalidate>
+            <div class="panel panel-default">
+                <div class="panel-heading ui-draggable-handle">
+                    <h3 class="panel-title"><strong>Usuário</strong> {{ user.name }}</h3>
+                    <ul class="panel-controls">
+                        <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
+                    </ul>
+                </div>
+                <input type="hidden" name="userId" value="{{ user.id }}" ng-model="user.id" />
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group" ng-class="{ 'has-error' : formUserRegister.$invalid && !formUserRegister.name.$pristine }">
+                                <label class="col-md-3 control-label">Nome</label>
+                                <div class="col-md-9">
+                                    <div class="input-group col-md-12">
+                                        <input type="text" class="form-control col-md-9" ng-model="user.name" ng-required="true" name="name">
+                                    </div>
+                                    <span ng-show="formUserRegister.$invalid && !formUserRegister.name.$pristine" class="help-block">Nome é obrigatório</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group" ng-class="{ 'has-error' : formUserRegister.$invalid && !formUserRegister.mail.$pristine }">
+                                <label class="col-md-3 control-label">E-mail</label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span>@</span></span>
+                                        <input type="email" class="form-control" ng-model="user.email" name="mail" ng-required="true">
+                                    </div>
+                                    <span ng-show="formUserRegister.$invalid && !formUserRegister.mail.$pristine" class="help-block">Email é obrigatório</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group" ng-class="{ 'has-error' : formUserRegister.$invalid && !formUserRegister.userName.$pristine }">
+                                <label class="col-md-3 control-label">Usuário</label>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                        <input type="text" class="form-control" ng-model="user.userName" name="userName" ng-required="true">
+                                    </div>
+                                    <span ng-show="formUserRegister.$invalid && !formUserRegister.userName.$pristine" class="help-block">Nome de usuário é obrigatório</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Password</label>
+                                <div class="col-md-9 col-xs-12">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="fa fa-unlock-alt"></span></span>
+                                        <input type="password" class="form-control" ng-model="user.password" ng-required="false">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="panel-footer">
+                    <button class="btn btn-primary" ng-hide="{{ user.id > 0 }}" ng-click="saveUser(user)"><i class="fa fa-check"></i> Salvar</button>
+                    <button class="btn btn-primary" ng-hide="{{ user.id == 0 }}" ng-click="editUser(user)"><i class="fa fa-check"></i> Editar</button>
+                    <input type="reset" name="name" value="Limpar" class="btn btn-default" />
+                </div>
+            </div>
+        </form>
+        <!-- END FORM -->
+    </div>
+</div>

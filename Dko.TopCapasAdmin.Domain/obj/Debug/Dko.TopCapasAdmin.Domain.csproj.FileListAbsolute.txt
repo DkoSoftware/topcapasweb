@@ -1,0 +1,5 @@
+C:\DKO_IT\Projects\TopCapasAdmin\Dko.TopCapasAdmin\Dko.TopCapasAdmin.Domain\bin\Debug\Dko.TopCapasAdmin.Domain.dll
+C:\DKO_IT\Projects\TopCapasAdmin\Dko.TopCapasAdmin\Dko.TopCapasAdmin.Domain\bin\Debug\Dko.TopCapasAdmin.Domain.pdb
+C:\DKO_IT\Projects\TopCapasAdmin\Dko.TopCapasAdmin\Dko.TopCapasAdmin.Domain\obj\Debug\Dko.TopCapasAdmin.Domain.csprojResolveAssemblyReference.cache
+C:\DKO_IT\Projects\TopCapasAdmin\Dko.TopCapasAdmin\Dko.TopCapasAdmin.Domain\obj\Debug\Dko.TopCapasAdmin.Domain.dll
+C:\DKO_IT\Projects\TopCapasAdmin\Dko.TopCapasAdmin\Dko.TopCapasAdmin.Domain\obj\Debug\Dko.TopCapasAdmin.Domain.pdb
